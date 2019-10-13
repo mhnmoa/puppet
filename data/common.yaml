@@ -1,0 +1,4 @@
+---
+jenkins::config_hash:
+  JENKINS_PORT:
+    value: 8082
