@@ -6,19 +6,18 @@
 #   include profile::jenkins
 class profile::jenkins {
 
-  class { 'jenkins': 
-    lts => true,
-    port => 8082,
-    config_hash => {
-      'JENKINS_PORT' => { 'value' => '8082' } ,
+  class { 'jenkins':
+    lts                => true,
+    port               => 8082,
+    config_hash        => {
+      'JENKINS_PORT' => {
+        'value' => '8082'
+      },
     },
     configure_firewall => true,
   }
 
-  package { 'git': 
+  package { 'git':
     ensure => latest,
   }
-
-
-
 }
