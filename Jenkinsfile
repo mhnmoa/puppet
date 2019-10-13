@@ -7,7 +7,7 @@ pipeline {
     stages  {
         stage('Test') {
             steps {
-                sh 'find manifests -name *.pp -exec /opt/puppetlabs/bin/puppet parser validate {} +;'
+                sh '/opt/puppetlabs/pdk/bin/pdk validate'
             }
         }
     }
